@@ -1,7 +1,11 @@
 const express = require('express');
 const server = express();
 
-// Complete your server here!
-// Do NOT `server.listen()` inside this file!
+const actionRouter = require('./api/actions/actions-router')
+const projectsRouter = require('./api/projects/projects-router')
+
+server.use(express.json())
+server.use(actionRouter)
+server.use(projectsRouter)
 
 module.exports = server;
