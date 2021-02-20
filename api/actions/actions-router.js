@@ -13,7 +13,7 @@ router.post('/actions', (req, res) => {
        res.status(201).json(action)
    })
    .catch((err) => {
-       res.status(500).json({message: `There was an error while saving the action to the database`})
+       res.status(500).json({message: `There was an error while saving the action to our database`})
    })
 })
 
